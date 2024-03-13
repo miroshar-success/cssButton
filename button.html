@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <style>
+      .custom-button {
+        position: relative;
+        top: 100px;
+        width: 100px;
+        height: 100px;
+      }
+      .custom-button:hover .outsideDotBorder{
+        transform: unset;
+        left: 8px;
+        top: 8px;
+        width: 80px;
+        height: 80px;
+        animation: turnaround 3s infinite linear;
+      }
+      .custom-button:hover .insideCircle{
+        width: 100px;
+        height: 100px;
+      }
+      .custom-button:hover .blackBackground{
+        width: 140px;
+        height: 140px;
+        background-color: rgb(0, 0, 0);
+      }
+      .arrow-icon {
+        display: inline-block;
+        border: solid #ffffff;
+        border-width: 0px 4px 4px 0px;
+        padding: 6px;
+        -webkit-transform: translate(-50%, -50%) rotate(225deg);
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(225deg);
+        z-index: 101;
+        cursor: pointer;
+      }
+      .outsideDotBorder {
+        position: relative;
+        border-radius: 50%;
+        border-width: 2pt;
+        border-style: dotted;
+        border-color: rgba(255, 255, 255, 1);
+        width: 96px;
+        height: 96px;
+        left: -20px;
+        top: -20px;
+        transition-delay: 0s;
+        transition-duration: 0.3s;
+        transition-property: all;
+        cursor: pointer;
+      }
+      .blackBackground {
+        position: relative;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition-delay: 0s;
+        transition-duration: 0.3s;
+        transition-property: initial;
+        cursor: pointer;
+      }
+      .insideCircle {
+        border-radius: 50%;
+        border: 2px solid white;
+        width: 60px;
+        height: 60px;
+        opacity: 1;
+        top: 50%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition-delay: 0;
+        transition-duration: 0.3s;
+        transition-property: all;
+        position: relative;
+      }
+      @keyframes turnaround {
+        100% {
+          transform: rotate(180deg);
+        }
+      }
+    </style>
+  </head>
+  <body style="padding: 150px; background: green">
+    <div class="custom-button">
+      <div class="arrow-icon"></div>
+      <div class="blackBackground">
+        <div class="insideCircle">
+          <div class="outsideDotBorder"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
